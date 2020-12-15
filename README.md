@@ -76,6 +76,9 @@ Contributors of this project are not responsible for what happens next.
 >- OYE-001 (USB)
 >- MI-MINI (USB)
 >- MI-3 (USB)
+>- MI-3A
+>- MI-3C
+>- MI-4C
 >- 5K-W20 (USB)
 >- JCG-AC860M (USB)
 >- JCG-836PRO (USB)
@@ -88,9 +91,6 @@ Contributors of this project are not responsible for what happens next.
 >- 360P2 (USB)
 >- MR2600 (USB)
 >- PSG1208
->- MI-3A
->- MI-4C
->- MI-3C
 ***
 
 ### 编译说明 ###
