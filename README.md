@@ -88,7 +88,9 @@ Contributors of this project are not responsible for what happens next.
 >- 360P2 (USB)
 >- MR2600 (USB)
 >- PSG1208
-
+>- MI-3A
+>- MI-4C
+>- MI-3C
 ***
 
 ### 编译说明 ###
