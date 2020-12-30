@@ -148,6 +148,4 @@ fakeroot ./build_firmware_modify PSG1218
 
 ### 请参阅 ###
 - https://yuos.top/index.php/archives/11/
-- https://www.jianshu.com/p/cb51fb0fb2ac
-- https://www.jianshu.com/p/d76a63a12eae
-- https://www.jianshu.com/p/6b8403cdea46
+- https://yuos.top/index.php/archives/208/
