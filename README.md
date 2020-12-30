@@ -64,34 +64,51 @@ Contributors of this project are not responsible for what happens next.
 >- [frpc](https://github.com/fatedier/frp) ```CONFIG_FIRMWARE_INCLUDE_FRPC```
 >- [frps](https://github.com/fatedier/frp) ```CONFIG_FIRMWARE_INCLUDE_FRPS```
 
-- 已适配除官方适配外的以下机型
->- WR1200JS (USB)
->- NEWIFI3 (USB)
->- PSG1218
->- K2P
->- K2P-USB (USB)
->- MZ-R13
->- MZ-R13P
->- HC5661A
->- OYE-001 (USB)
->- MI-MINI (USB)
+- 已额外适配除官方适配外的以下机型
 >- MI-3 (USB)
->- MI-3MI 硬改版(USB)
+>- MI-3MI (USB) ```小米路由3硬改SOP flash 16mb```
 >- MI-3A
 >- MI-3C
 >- MI-4C
->- 5K-W20 (USB)
->- JCG-AC860M (USB)
->- JCG-836PRO (USB)
->- DIR-882 (USB)
->- DIR-878
->- RT-AC1200GU (USB)
->- XY-C1 (USB)
->- NEWIFI-MINI (USB)
->- HC5861B
->- 360P2 (USB)
->- MR2600 (USB)
->- PSG1208
+- 小米路由3C 网口以及LED灯配置分别如下
+>- wlan and lan: >>>>> kernel-3.4.x.config
+```shell
+# CONFIG_RAETH_ESW_IGMP_SNOOP_OFF is not set
+CONFIG_RAETH_ESW_IGMP_SNOOP_SW=y
+CONFIG_RAETH_ESW_PORT_WAN=0
+CONFIG_RAETH_ESW_PORT_LAN1=4
+CONFIG_RAETH_ESW_PORT_LAN2=2
+CONFIG_RAETH_ESW_PORT_LAN3=3
+CONFIG_RAETH_ESW_PORT_LAN4=1
+```
+>- led: >>>> board.h
+```shell
+#undef  BOARD_GPIO_LED_ALL 
+#define BOARD_GPIO_LED_WIFI	11
+#define BOARD_GPIO_LED_POWER	24	/* 24: blue, 26: yellow, 29: red */
+#undef  BOARD_GPIO_LED_LAN
+#undef  BOARD_GPIO_LED_WAN
+```
+
+- 小米路由4C 网口以及LED灯配置分别如下
+>- wlan and lan: >>>>> kernel-3.4.x.config
+```shell
+# CONFIG_RAETH_ESW_IGMP_SNOOP_OFF is not set
+CONFIG_RAETH_ESW_IGMP_SNOOP_SW=y
+CONFIG_RAETH_ESW_PORT_WAN=1
+CONFIG_RAETH_ESW_PORT_LAN1=4
+CONFIG_RAETH_ESW_PORT_LAN2=2
+CONFIG_RAETH_ESW_PORT_LAN3=3
+CONFIG_RAETH_ESW_PORT_LAN4=0
+```
+>- led: >>>> board.h
+```shell
+#undef  BOARD_GPIO_LED_ALL 
+#define BOARD_GPIO_LED_WIFI	11
+#define BOARD_GPIO_LED_POWER	24	/* 24: blue, 26: yellow, 29: red */
+#undef  BOARD_GPIO_LED_LAN
+#undef  BOARD_GPIO_LED_WAN
+```
 ***
 
 ### 编译说明 ###
@@ -130,6 +147,7 @@ fakeroot ./build_firmware_modify PSG1218
 ***
 
 ### 请参阅 ###
+- https://yuos.top/index.php/archives/11/
 - https://www.jianshu.com/p/cb51fb0fb2ac
 - https://www.jianshu.com/p/d76a63a12eae
 - https://www.jianshu.com/p/6b8403cdea46
