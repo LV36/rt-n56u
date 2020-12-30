@@ -36,9 +36,12 @@ Contributors of this project are not responsible for what happens next.
 - 使用了[PROMETHEUS](http://pm.freize.net/index.html)提供的部分补丁，包括新版本的类库、软件包和WIFI驱动补丁
 - 使用了[Linaro1985/padavan-ng](https://github.com/Linaro1985/padavan-ng)的部分软件包
 ### 固件管理 ###
-- 我编译的固件后台管理地址:```shell 10.32.0.1 ```
-- user: ```shell admin ```
-- password: ```shell admin```
+- 我编译的固件后台管理地址:
+```shell 
+10.32.0.1 
+user: admin
+password: admin
+```
 
 - 已额外适配除官方适配外的以下机型
 >- MI-3 (USB)
